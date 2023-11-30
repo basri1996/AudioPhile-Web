@@ -55,7 +55,6 @@ export const Div = styled.div`
   padding: 0 24px;
   justify-content: space-between;
   @media (min-width: 768px) {
-    padding: 0;
   }
   @media (min-width: 1440px) {
     padding: 0;
@@ -69,6 +68,9 @@ export const RectangleDiv = styled.div`
   align-items: center;
   gap: 3px;
   flex-direction: column;
+  @media (min-width: 768px) {
+    margin-right: 50px;
+  }
   @media (min-width: 1440px) {
     display: none;
   }
@@ -79,7 +81,6 @@ export const RectangleDivMobile = styled(RectangleDiv)`
   }
 `;
 export const RectangleImage = styled.img`
-  margin-right: 42px;
   width: 16px;
   height: 3px;
 `;

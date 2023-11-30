@@ -5,16 +5,9 @@ export const OpacityDiv = styled.div`
   background-color: rgba(0, 0, 0, 0.5);
   position: absolute;
   width: 100%;
-  height: 380%;
+  height: 207%;
   top: 88px;
   z-index: 20;
-  @media (min-width: 768px) {
-    width: 157%;
-  }
-  @media (min-width: 1440px) {
-    width: 100%;
-    height: 380%;
-  }
 `;
 export const CheckOutBtn = styled.button`
   all: unset;
@@ -52,8 +45,10 @@ export const WhiteCard = styled.div`
     top: 127px;
   }
   @media (min-width: 1440px) {
-    right: 385px;
     padding: 32px 31px 31px 33px;
+    position: inherit;
+    top: 0;
+    right: 0;
   }
 `;
 
@@ -181,31 +176,9 @@ export const Min = styled.div`
 
 export const CartDiv = styled.div`
   height: auto;
-  width: 377px;
-  left: 0;
-  top: 32px;
   border-radius: 8px;
-  background-color: ${(props) => props.theme.colors.White};
-  position: absolute;
   display: flex;
-  gap: 149px;
-  padding-left: 33px;
-`;
-
-export const Wrapper = styled.div`
-  background-color: ${(props) =>
-    props.title || props.visible ? "black" : "#1a1a1a"};
-  @media (min-width: 768px) {
-    padding: 0 39.61px;
-    margin-left: -60%;
-  }
-  @media (min-width: 1440px) {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    margin-left: 0px;
-  }
+  justify-content: space-between;
 `;
 
 export const StyleLink = styled(Link)`
@@ -213,4 +186,26 @@ export const StyleLink = styled(Link)`
   display: flex;
   justify-content: center;
   align-items: center;
+`;
+export const CartWrapperDiv = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  @media (min-width: 1440px) {
+    width: 1115.55px;
+    height: 500px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-start;
+    padding-top: 20px;
+  }
+`;
+export const TransparentWrapper = styled.div`
+  @media (min-width: 1440px) {
+    position: absolute;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 `;

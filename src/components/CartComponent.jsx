@@ -2,6 +2,7 @@ import {
   Cart,
   CartDiv,
   CartTitle,
+  CartWrapperDiv,
   CheckOutBtn,
   CountBtn,
   CountWrap,
@@ -16,10 +17,10 @@ import {
   Total,
   TotalPrice,
   TotalWrap,
+  TransparentWrapper,
   WhiteCard,
   Wrap,
   WraperMain,
-  Wrapper,
 } from "./CartComponentStyles";
 import { UseAppContext } from "../context/AppContext";
 
@@ -57,8 +58,10 @@ export default function CartComponent() {
   };
 
   return (
-    <Wrapper>
+    <>
       <OpacityDiv onClick={() => cartDispatch({ type: "changeVisibility" })} />
+      <TransparentWrapper>
+      <CartWrapperDiv>
       <WhiteCard>
         {cartState.cart.length > 0 && (
           <CartDiv>
@@ -131,6 +134,8 @@ export default function CartComponent() {
           </StyleLink>
         )}
       </WhiteCard>
-    </Wrapper>
+   </CartWrapperDiv>
+   </TransparentWrapper>
+   </>
   );
 }
