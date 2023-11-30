@@ -39,7 +39,7 @@ export const WhiteCard = styled.div`
   border-radius: 8px;
   width: 375px;
   padding: 32px 31px 31px 33px;
-  top: 90px;
+  top: 100px;
   @media (min-width: 400px) {
     right: 3%;
     top: 127px;
