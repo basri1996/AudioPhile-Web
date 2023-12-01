@@ -28,9 +28,7 @@ export const MappedDiv = styled.div`
 
 export const Wrapper = styled.div`
   background-color: ${(props) =>
-    (props.visible === "true") | (props.locationpath === "true")
-      ? "black"
-      : "#1a1a1a"};
+    props.locationpath === "true" ? "black" : "#1a1a1a"};
   @media (min-width: 768px) {
     padding: 0;
     margin-left: -60%;
@@ -48,9 +46,7 @@ export const Div = styled.div`
   height: 89px;
   width: 100%;
   background-color: ${(props) =>
-    props.visible === "true" || props.locationpath === "true"
-      ? "black"
-      : "#1a1a1a"};
+    props.locationpath === "true" ? "#black" : "#1a1a1a"};
   display: flex;
   padding: 0 24px;
   justify-content: space-between;

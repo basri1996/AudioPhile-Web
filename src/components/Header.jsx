@@ -30,14 +30,13 @@ import shape from "../images/Shape .png";
 import ShopItem from "./ShopItem";
 
 function Header() {
-  const { cartDispatch, icons,cartState } = UseAppContext();
+  const { cartDispatch, icons } = UseAppContext();
   const [menuVisible, setMenuVisible] = useState(false);
   const location = useLocation();
   const navigate = useNavigate();
-  const active = cartState.visible.toString()
   const locationpath=location.pathname.includes("/productpage").toString() 
 
-  console.log("active :" , active , "location :" ,locationpath)
+  
 
   const navigateTo = (cat) => {
     navigate(`/productpage/${cat}`)
@@ -46,8 +45,8 @@ function Header() {
 
   return (
     <>
-      <Wrapper visible={active} locationpath={locationpath}>
-        <Div  visible={active} locationpath={locationpath}>
+      <Wrapper  locationpath={locationpath}>
+        <Div  locationpath={locationpath}>
           <RectangleDivMobile onClick={() => setMenuVisible(!menuVisible)}>
             <RectangleImageMobile src={rectangle} />
             <RectangleImageMobile src={rectangle} />

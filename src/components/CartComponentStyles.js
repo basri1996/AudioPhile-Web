@@ -5,8 +5,8 @@ export const OpacityDiv = styled.div`
   background-color: rgba(0, 0, 0, 0.5);
   position: absolute;
   width: 100%;
-  height: 207%;
-  top: 88px;
+  top: -88px;
+  height: 375%;
   z-index: 20;
 `;
 export const CheckOutBtn = styled.button`
