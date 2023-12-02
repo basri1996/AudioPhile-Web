@@ -34,20 +34,23 @@ function Header() {
   const [menuVisible, setMenuVisible] = useState(false);
   const location = useLocation();
   const navigate = useNavigate();
-  const locationpath=location.pathname.includes("/productpage").toString() 
-
-  
+  const locationpath = location.pathname.includes("/productpage").toString();
 
   const navigateTo = (cat) => {
-    navigate(`/productpage/${cat}`)
+    navigate(`/productpage/${cat}`);
     cartDispatch({ type: "visibleFalse" });
   };
 
   return (
     <>
-      <Wrapper  locationpath={locationpath}>
-        <Div  locationpath={locationpath}>
-          <RectangleDivMobile onClick={() => setMenuVisible(!menuVisible)}>
+      <Wrapper locationpath={locationpath}>
+        <Div locationpath={locationpath}>
+          <RectangleDivMobile
+            onClick={() => {
+              setMenuVisible(!menuVisible),
+                cartDispatch({ type: "visibleFalse" });
+            }}
+          >
             <RectangleImageMobile src={rectangle} />
             <RectangleImageMobile src={rectangle} />
             <RectangleImageMobile src={rectangle} />
@@ -58,24 +61,25 @@ function Header() {
             </AudioPhileDivMobile>
           </StyleLink>
           <WrapperTablet>
-            <RectangleDiv onClick={() => setMenuVisible(!menuVisible)}>
+            <RectangleDiv
+              onClick={() => {
+                setMenuVisible(!menuVisible),
+                  cartDispatch({ type: "visibleFalse" });
+              }}
+            >
               <RectangleImage src={rectangle} />
               <RectangleImage src={rectangle} />
               <RectangleImage src={rectangle} />
             </RectangleDiv>
             <AudioPhileDiv>
               <StyleLink to="/">
-                <AudioPhile src={audiophile} onClick={() => {
-                cartDispatch({ type: "visibleFalse" })
-              }} />
+                <AudioPhile src={audiophile} />
               </StyleLink>
             </AudioPhileDiv>
           </WrapperTablet>
           <MenuDiv>
             <StyleLink to="/">
-              <Home  onClick={() => {
-                cartDispatch({ type: "visibleFalse" })
-              }}>HOME</Home>
+              <Home>HOME</Home>
             </StyleLink>
             <HeadPhones
               onClick={(e) => {
@@ -101,10 +105,11 @@ function Header() {
             </EarPhones>
           </MenuDiv>
           <ShapeDiv
-            onClick={() =>
+            onClick={() => {
               !location.pathname.includes("/checkoutpage") &&
-              cartDispatch({ type: "changeVisibility" })
-            }
+                cartDispatch({ type: "changeVisibility" });
+              setMenuVisible(false);
+            }}
           >
             <Shape src={shape} />
           </ShapeDiv>
@@ -112,7 +117,7 @@ function Header() {
         <Line />
       </Wrapper>
       {menuVisible && (
-        <MappedDiv menuVisible={menuVisible}>
+        <MappedDiv>
           {icons.map((icon) => (
             <ShopItem title={icon.title} icon={icon.icon} key={icon.title} />
           ))}

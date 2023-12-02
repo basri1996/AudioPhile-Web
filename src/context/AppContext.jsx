@@ -113,6 +113,7 @@ export const AppContextProvider = ({ children }) => {
   const [mappedCategories, setMappedCategories] = useState([]);
   const [screenWidth, setScreenWidth] = useState(0);
   
+  
  
 
   useEffect(() => {
