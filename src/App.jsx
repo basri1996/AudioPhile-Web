@@ -13,10 +13,15 @@ import CheckOutPage from "./page/CheckOutPage";
 import CartComponent from "./components/CartComponent";
 
 
+
 function App() {
   const{cartState}=UseAppContext()
   const location=useLocation()
+  
+
+  
   return (
+   
     <ThemeProvider theme={defaultTheme}>
       <GlobalStyles />
       <Helmet>
@@ -37,9 +42,12 @@ function App() {
         <Footer />
        
     </ThemeProvider>
+    
   );
 }
 
 export default App;
+
+
 
 

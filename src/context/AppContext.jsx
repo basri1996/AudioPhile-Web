@@ -112,6 +112,7 @@ export const AppContextProvider = ({ children }) => {
   const [cartState, cartDispatch] = useReducer(cartReducer, cartInitialState);
   const [mappedCategories, setMappedCategories] = useState([]);
   const [screenWidth, setScreenWidth] = useState(0);
+  
  
 
   useEffect(() => {
@@ -185,7 +186,6 @@ export const AppContextProvider = ({ children }) => {
         cartDispatch,
         cartState,
         icons,
-        screenWidth
       }}
     >
       {children}

@@ -23,24 +23,18 @@ import {
   WraperMain,
 } from "./CartComponentStyles";
 import { UseAppContext } from "../context/AppContext";
-import { useLocation } from "react-router-dom";
+import { useEffect, useRef } from "react";
 
 export default function CartComponent() {
-  const { cartState, cartDispatch, state, screenWidth } = UseAppContext();
+  const { cartState, cartDispatch } = UseAppContext();
+  const opacityRef = useRef(null);
 
-  // this variables are for opacity div
-  const location = useLocation().pathname;
-  const productPageArraylength = state.filteredByCat.length;
-
-  const height = () => {
-    if (location === "/" && screenWidth < 768) {
-      return "920%";
-    } else if (location === "/" && screenWidth >= 768 && screenWidth<1440){
-      return "420%"
+  useEffect(() => {
+    if (opacityRef.current) {
+      const contentHeight = document.documentElement.scrollHeight;
+      opacityRef.current.style.height = `${contentHeight}px`;
     }
-  };
-
-  // cart function
+  }, [cartState.visible]);
 
   const changeQuantityInCard = (direction, title, price) => {
     const array = [...cartState.cart];
@@ -76,7 +70,7 @@ export default function CartComponent() {
     <>
       <OpacityDiv
         onClick={() => cartDispatch({ type: "changeVisibility" })}
-        height={height}
+        ref={opacityRef}
       />
       <TransparentWrapper>
         <CartWrapperDiv>
