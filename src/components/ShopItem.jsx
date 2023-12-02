@@ -10,9 +10,9 @@ import {
 } from "./ShopitemStyles";
 import more from "../images/Path 2 (1).png";
 
-function ShopItem({ icon, title }) {
+function ShopItem({ icon, title,setMenuVisible }) {
   return (
-    <Container>
+    <Container onClick={()=>setMenuVisible(false)}>
       <Icon src={icon}></Icon>
       <Down>
         <Title>{title}</Title>

@@ -119,7 +119,7 @@ function Header() {
       {menuVisible && (
         <MappedDiv>
           {icons.map((icon) => (
-            <ShopItem title={icon.title} icon={icon.icon} key={icon.title} />
+            <ShopItem setMenuVisible={setMenuVisible}title={icon.title} icon={icon.icon} key={icon.title} />
           ))}
         </MappedDiv>
       )}
