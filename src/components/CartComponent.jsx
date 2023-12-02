@@ -34,7 +34,7 @@ export default function CartComponent() {
 
   const height = () => {
     if (location === "/" && screenWidth < 768) {
-      return "530%";
+      return "920%";
     } else if (location === "/" && screenWidth >= 768 && screenWidth<1440){
       return "420%"
     }
