@@ -6,7 +6,7 @@ export const OpacityDiv = styled.div`
   position: absolute;
   width: 100%;
   top: -88px;
-  height: 375%;
+  height: ${(props) => props.height};
   z-index: 20;
 `;
 export const CheckOutBtn = styled.button`

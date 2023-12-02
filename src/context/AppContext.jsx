@@ -185,6 +185,7 @@ export const AppContextProvider = ({ children }) => {
         cartDispatch,
         cartState,
         icons,
+        screenWidth
       }}
     >
       {children}
