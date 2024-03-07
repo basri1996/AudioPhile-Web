@@ -103,6 +103,7 @@ export const Btn = styled.button`
   line-height: 18px;
   letter-spacing: 1px;
   text-align: center;
+  cursor: pointer;
   &:hover {
     background-color: ${(props) => props.theme.colors.LightOrange};
   }

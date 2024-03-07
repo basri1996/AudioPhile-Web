@@ -52,7 +52,7 @@ const cartReducer = (state, action) => {
         cart: [...state.cart, action.payload],
         productQuantity: state.productQuantity + action.payload.number,
         total: state.total + action.payload.price * action.payload.number,
-        visible: true,
+        
       };
     case "changeQuantity":
       return {
@@ -64,7 +64,7 @@ const cartReducer = (state, action) => {
         ),
         productQuantity: state.productQuantity + action.quantity,
         total: state.total + action.quantity * action.price,
-        visible: true,
+        
       };
     case "changeVisibility":
       return {

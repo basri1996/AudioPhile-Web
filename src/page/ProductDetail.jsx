@@ -33,6 +33,7 @@ import BeforeFooter from "../components/BeforeFooter";
 import { useEffect, useState } from "react";
 import { UseAppContext } from "../context/AppContext";
 import { useParams } from "react-router-dom";
+import toast from "react-hot-toast";
 
 
 const ProductDetail = () => {
@@ -72,6 +73,7 @@ const ProductDetail = () => {
       });
     }
     setCount(1);
+    toast.success("Product successfully added");
   }
 
 

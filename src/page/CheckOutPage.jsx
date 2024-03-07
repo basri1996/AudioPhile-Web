@@ -35,27 +35,29 @@ import EndPoint from "../components/EndPoint";
 import InputCountry from "../components/InputCountry";
 import { UseAppContext } from "../context/AppContext";
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 
 
 function CheckOutPage() {
   const { cartState,cartDispatch } = UseAppContext();
   const [endPointVisible ,setEndPointVisible]=useState(false)
-  
+  const navigate=useNavigate()
 
   const {
     register,
     handleSubmit,
     formState: { errors },
   } = useForm();
-
   
-
   function SubmitHandler(values) {
-    console.log("values", values);
-    cartDispatch({type:"clearCart"})
-    setEndPointVisible(true)
-    
+    if(cartState.cart.length ===0){
+      navigate("/")
+    }else if(cartState.cart.length >0){
+      console.log("values", values);
+      cartDispatch({type:"clearCart"})
+      setEndPointVisible(true)
+    }
   }
 
   return (

@@ -25,6 +25,7 @@ import {
 import { UseAppContext } from "../context/AppContext";
 import { useEffect, useRef } from "react";
 
+
 export default function CartComponent() {
   const { cartState, cartDispatch } = UseAppContext();
   const opacityRef = useRef(null);

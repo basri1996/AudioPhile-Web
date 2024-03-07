@@ -11,7 +11,7 @@ import Home from "./page/Home";
 import ProductPage from "./page/ProductPage";
 import CheckOutPage from "./page/CheckOutPage";
 import CartComponent from "./components/CartComponent";
-
+import { Toaster } from 'react-hot-toast';
 
 
 function App() {
@@ -24,6 +24,22 @@ function App() {
    
     <ThemeProvider theme={defaultTheme}>
       <GlobalStyles />
+      <Toaster
+        position="top-center"
+        gutter={12}
+        containerStyle={{ margin: "95px" }}
+        toastOptions={{
+          success: { duration: 3000 },
+          error: { duration: 5000 },
+          style: {
+            fontSize: "16px",
+            maxWidth: "500px",
+            padding: "16px 24px",
+            backgroundColor: "white",
+            color: "green",
+          },
+        }}
+      />
       <Helmet>
         <link
           href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Poppins:wght@400;600;700&family=Rubik:wght@400;500;600;700&display=swap"

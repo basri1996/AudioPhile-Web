@@ -16,7 +16,6 @@ function ProductPage() {
   const { state, dispatch, icons } = UseAppContext();
 
   // const renderCountRef = useRef(0);
-
   // renderCountRef.current += 1;
   // console.log("productpage", renderCountRef.current);
 
