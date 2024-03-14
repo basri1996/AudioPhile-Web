@@ -20,6 +20,7 @@ import {
   StyleLink,
   Wrapper,
   WrapperTablet,
+  Circle
 } from "./HeaderStyles";
 import { UseAppContext } from "../context/AppContext";
 import { useState } from "react";
@@ -30,7 +31,7 @@ import shape from "../images/Shape .png";
 import ShopItem from "./ShopItem";
 
 function Header() {
-  const { cartDispatch, icons } = UseAppContext();
+  const { cartDispatch, icons,cartState } = UseAppContext();
   const [menuVisible, setMenuVisible] = useState(false);
   const location = useLocation();
   const navigate = useNavigate();
@@ -112,6 +113,8 @@ function Header() {
             }}
           >
             <Shape src={shape} />
+            {cartState.cart.length > 0 && 
+            <Circle>{cartState?.productQuantity}</Circle>}
           </ShapeDiv>
         </Div>
         <Line />

@@ -106,7 +106,9 @@ export const AudioPhileMobile = styled(AudioPhile)`
   cursor: pointer;
 `;
 
-export const ShapeDiv = styled(AudioPhileDiv)``;
+export const ShapeDiv = styled(AudioPhileDiv)`
+  position: relative;
+`;
 export const Shape = styled.img``;
 
 export const WrapperTablet = styled.div`
@@ -157,4 +159,20 @@ export const StyleLink = styled(Link)`
   display: flex;
   justify-content: center;
   align-items: center;
+`;
+
+export const Circle = styled.div`
+  border-radius: 50%;
+  width: 19.19px;
+  height: 19.19px;
+  background-color: #d87d4a;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 25px;
+  left: 16px;
+  color: white;
+  font-size: 14px;
+  font-weight: 500;
 `;

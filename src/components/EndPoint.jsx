@@ -7,6 +7,7 @@ function EndPoint() {
   
   return (
     <OpacityDiv>
+      
       <Div>
         <Img src={photo}></Img>
         <ThankuText>THANK YOU FOR YOUR ORDER</ThankuText>
@@ -16,11 +17,14 @@ function EndPoint() {
           </CheckOutBtn>
         </StyleLink>
       </Div>
+     
     </OpacityDiv>
   );
 }
 
 export default EndPoint;
+
+
 
 const Img = styled.img`
   width: 40px;
@@ -48,34 +52,10 @@ const Div = styled.div`
   gap: 50px;
   width: 350px;
   height: 350px;
-  left: 7%;
-  top: 12%;
+  left: 50%;
+  top: 20%;
   padding: 35px;
-  @media (min-width: 440px) {
-    left: 10%;
-  }
-  @media (min-width: 450px) {
-    left: 15%;
-  }
-  @media (min-width: 550px) {
-    left: 20%;
-  }
-  @media (min-width: 650px) {
-    left: 25%;
-  }
-  @media (min-width: 750px) {
-    left: 30%;
-  }
-  @media (min-width: 950px) {
-    width: 540px;
-    height: 540px;
-    left: 25%;
-    padding: 0;
-  }
-  @media (min-width: 1440px) {
-    left: 35%;
-    top: 12%;
-  }
+  transform:translate(-50%,-50%)
 `;
 const OpacityDiv = styled.div`
   background-color: rgba(0, 0, 0, 0.7);

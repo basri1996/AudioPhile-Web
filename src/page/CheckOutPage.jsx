@@ -34,7 +34,7 @@ import { useForm } from "react-hook-form";
 import EndPoint from "../components/EndPoint";
 import InputCountry from "../components/InputCountry";
 import { UseAppContext } from "../context/AppContext";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 
 
@@ -49,6 +49,12 @@ function CheckOutPage() {
     handleSubmit,
     formState: { errors },
   } = useForm();
+
+  useEffect(()=>{
+    if(cartState?.cart?.length <=0 && !endPointVisible){
+      navigate("/")
+    }
+  })
   
   function SubmitHandler(values) {
     if(cartState.cart.length ===0){
@@ -59,7 +65,7 @@ function CheckOutPage() {
       setEndPointVisible(true)
     }
   }
-
+ 
   return (
     <FlexDiv onSubmit={handleSubmit(SubmitHandler)}>
       {endPointVisible && <EndPoint />}
