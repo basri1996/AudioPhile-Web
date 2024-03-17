@@ -15,7 +15,7 @@ export const ShopItemMappedDiv = styled.div`
   flex-direction: column;
   @media (min-width: 768px) {
     flex-direction: row;
-    gap: 10px;
+    gap: 30px;
   }
   @media (min-width: 1440px) {
     gap: 30px;
@@ -186,13 +186,13 @@ export const But = styled.button`
   cursor: pointer;
   text-align: center;
   position: absolute;
-  @media (min-width: 768px) {
-    left: 43%;
-    bottom: 15%;
-  }
+  transform: translate(-50%, -50%);
+  left: 50%;
+  bottom: 12%;
   @media (min-width: 1440px) {
     left: 64.5%;
     bottom: 20%;
+    transform: none;
   }
   &:hover {
     background-color: ${(props) => props.theme.colors.LightBlack};

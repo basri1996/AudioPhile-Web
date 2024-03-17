@@ -39,7 +39,7 @@ export const MainDiv = styled.div`
 export const BlackHadPhone = styled.div`
   background-image: url(${MobileHad});
   width: 100%;
-  height: 511px;
+  height: 500px;
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -56,16 +56,10 @@ export const BlackHadPhone = styled.div`
     align-items: center;
   }
   @media (min-width: 1440px) {
-    background-color: #1a1a1a;
-    align-items: start;
-    padding: 0 165px;
-    width: 708.8px;
-    height: 632px;
-    background-position: top;
-    justify-content: left;
     display: none;
   }
 `;
+
 export const Header = styled.h1`
   font-family: Manrope;
   font-size: 14px;

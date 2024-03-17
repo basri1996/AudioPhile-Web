@@ -51,17 +51,14 @@ export const Down = styled.div`
 export const Icon = styled.img`
   position: absolute;
   width: 180px;
-  height: 180px;
   bottom: 35%;
   left: 22%;
   @media (min-width: 768px) {
     width: 140px;
-    height: 140px;
     left: 17.5%;
     top: -32%;
   }
   @media (min-width: 1440px) {
-    height: 200px;
     width: 200px;
     left: 20%;
     top: -38%;

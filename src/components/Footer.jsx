@@ -17,6 +17,7 @@ import {
   Text,
   Wrapper,
   Wrapper1,
+  WrapperDiv
 } from "./FooterStyles";
 import audiophile from "../images/audiophile.png";
 import facebook from "../images/facebook.png";
@@ -61,8 +62,9 @@ export default function Footer() {
           </Wrapper>
         </Wrapper1>
       </Container>
-
+      
       <Container1>
+        <WrapperDiv>
         <Line></Line>
         <DeskWrapper>
           <StyleLink to="/">
@@ -97,6 +99,7 @@ export default function Footer() {
           </Wrapper>
         </DeskWrapper2>
         <Text>Copyright 2021. All Rights Reserved</Text>
+        </WrapperDiv>
       </Container1>
     </>
   );

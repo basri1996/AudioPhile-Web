@@ -109,7 +109,9 @@ export const AudioPhileMobile = styled(AudioPhile)`
 export const ShapeDiv = styled(AudioPhileDiv)`
   position: relative;
 `;
-export const Shape = styled.img``;
+export const Shape = styled.img`
+  cursor: pointer;
+`;
 
 export const WrapperTablet = styled.div`
   display: none;

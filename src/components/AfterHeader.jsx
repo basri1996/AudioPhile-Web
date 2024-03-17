@@ -13,11 +13,13 @@ import {
 } from "./AfterHeaderStyles";
 import DesktopHad from "../images/xx99-mark-ii-headphones.f7f5fde6090b9f9cfd2ceb115f60aa37.jpg";
 
+
 const AfterHeader = () => {
   return (
     <MainDiv>
       <PhotoDesktop src={DesktopHad} />
       <BlackHadPhone>
+     
         <Header>NEW PRODUCT</Header>
         <HadWraper>
           <HeaderBoldOne>XX99 MARK II</HeaderBoldOne>

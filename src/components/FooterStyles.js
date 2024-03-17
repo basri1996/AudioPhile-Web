@@ -61,10 +61,14 @@ export const Container1 = styled.div`
 
   @media (min-width: 1440px) {
     display: block;
-    width: 100%;
     background-color: ${(props) => props.theme.colors.Black};
-    padding: 0 165px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
+`;
+export const WrapperDiv = styled.div`
+  width: 1110px;
 `;
 
 export const Container = styled.div`
